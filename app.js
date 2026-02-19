@@ -2,7 +2,7 @@ import { supabase } from "./script.js";
 
 
 let signForm = document.querySelector('form');
-let errorMessages = document.getElementById('error-messages');
+let errorMessages = document.getElementById('errorMessages');
 
 signForm.addEventListener('submit', (e) => {
     e.preventDefault()

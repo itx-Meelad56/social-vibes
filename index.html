@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Welcome Back</h2>
+
+            <form id="signinForm">
+                <input type="email" placeholder="Email" required id="email">
+                <input type="password" placeholder="Password" required id="password">
+                <button type="submit" id="submitBtn">Sign In</button>
+            </form>
+            <p id="errorMessages"></p>
+            <p>Don't have an account?
+                <a href="signup.html">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-logo">Social Vibes</div>
+
+            <p class="footer-text">
+                A Full Stack Social Media App built with HTML, CSS, JavaScript & Supabase
+            </p>
+
+            <p class="footer-dev">
+                Developed by <span class="dev-name">Meelad Raza</span>
+            </p>
+
+            <p class="footer-copy">
+                © 2026 Social Vibes. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <script type="module" src="signin.js"></script>
+</body>
+
+</html>

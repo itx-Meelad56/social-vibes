@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Create Account</h2>
+
+            <form id="signupForm">
+                <input type="text" placeholder="UserName" required id="userName">
+                <input type="text" placeholder="FirstName" required id="firstName">
+                <input type="text" placeholder="LastName" required id="lastName">
+                <input type="email" placeholder="Email" required id="email">
+                <input type="password" placeholder="Password" required id="password">
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="error-messages"></p>
+            <p>Already have an account?
+                <a href="index.html">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-logo">Social Vibes</div>
+
+            <p class="footer-text">
+                A Full Stack Social Media App built with HTML, CSS, JavaScript & Supabase
+            </p>
+
+            <p class="footer-dev">
+                Developed by <span class="dev-name">Meelad Raza</span>
+            </p>
+
+            <p class="footer-copy">
+                © 2026 Social Vibes. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

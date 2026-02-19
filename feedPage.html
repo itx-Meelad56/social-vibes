@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Social Vibes</div>
+        <div class="nav-right">
+            <span class="user-name" id="user-name"></span>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+
+    <div class="feed-container">
+
+
+        <div class="create-post">
+            <div class="create-top">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.9_MptOLxjJEGSGukPt9FWQHaHa?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    class="avatar">
+                <textarea placeholder="What's on your mind?" id="postText"></textarea>
+            </div>
+
+            <div class="create-bottom">
+                <input type="file" id="fileInput">
+                <button class="post-btn" id="postBtn">Post</button>
+            </div>
+        </div>
+
+
+        <div class="posts">
+            <!-- <div class="post-card" id="post-card">
+                <div class="post-header"> 
+                    <img src="https://i.pravatar.cc/45?img=3" class="avatar">
+                    <div>
+                        <h4 id="postName">John Doe</h4>
+                        <span class="post-time" id="postTime">2 hours ago</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p id="postCaption">This is my first post on MySocial 🚀</p>
+                </div>
+
+              
+                <div class="post-image">
+                    <img src="https://picsum.photos/600/350" alt="post image" id="postImage">
+                </div>
+
+                
+                <div class="post-actions">
+                    <button class="like-btn" id="likeBtn">❤️ 24</button>
+                    <button class="comment-toggle">💬 8 Comments</button>
+                </div>
+
+              
+                <div class="comments-section">
+
+                    <div class="comment">
+                        <strong>Jane:</strong> Amazing post 🔥
+                    </div>
+                    
+                    <div class="comment">
+                        <strong>Alex:</strong> Keep it up bro! 
+                    </div>
+                    
+                    <div class="add-comment">
+                        <input type="text" placeholder="Write a comment..." id="postComment">
+                        <button id="commentBtn">Add</button>
+                    </div>
+
+                </div> 
+
+            </div> -->
+
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-logo">Social Vibes</div>
+
+            <p class="footer-text">
+                A Full Stack Social Media App built with HTML, CSS, JavaScript & Supabase
+            </p>
+
+            <p class="footer-dev">
+                Developed by <span class="dev-name">Meelad Raza</span>
+            </p>
+
+            <p class="footer-copy">
+                © 2026 Social Vibes. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script type="module" src="feed.js"></script>
+</body>
+
+</html>

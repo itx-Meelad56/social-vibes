@@ -37,7 +37,7 @@ async function loginFoo(email, password) {
     } else {
         console.log("Profile data:", profile);
         alert(`Welcome ${profile.username}!`);
-        window.location.href = "./feedPage.html";
+        window.location.href = "/feedPage.html";
     };
 }
 

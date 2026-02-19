@@ -50,7 +50,7 @@ async function signUplogicFoo(userName, firstName, lastName, email, password) {
     }
     else {
         alert('Signup complete! 🎉');
-        window.location.href = './index.html'
+        window.location.href = '/index.html'
     }
 }
 

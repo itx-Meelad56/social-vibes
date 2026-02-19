@@ -4,7 +4,7 @@ async function getUser() {
     const { data: { session } } = await supabase.auth.getSession();
 
     if (!session) {
-        window.location.href = "./index.html";
+        window.location.href = "/index.html";
         return null;
     }
 
@@ -24,7 +24,7 @@ document.getElementById('user-name').textContent = data[0].username
 document.getElementById("logoutBtn")
     .addEventListener("click", async () => {
         await supabase.auth.signOut();
-        window.location.href = "./index.html";
+        window.location.href = "/index.html";
     });
 
 let postUrl = "";

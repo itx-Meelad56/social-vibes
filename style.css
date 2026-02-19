@@ -86,7 +86,7 @@ body {
   font-weight: 600;
 }
 
-#error-messages {
+#errorMessages {
   color: #ff4b4b;
   font-size: 13px;
   margin-top: 8px;

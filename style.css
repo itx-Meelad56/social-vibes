@@ -205,6 +205,51 @@ body {
   color: #eee;
 }
 
+
+.owner-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.owner-actions button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.edit-btn {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}
+
+.edit-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+
+.delete-btn {
+  background: linear-gradient(135deg, #1f2937, #374151);
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+
+.delete-btn:hover {
+  background: #ef4444;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
 .post-btn {
   padding: 10px 22px;
   background: #1de9b6;

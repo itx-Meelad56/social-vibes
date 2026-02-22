@@ -154,7 +154,7 @@ async function loadPosts() {
 
         <div class="post-actions">
           <button onclick="likePost('${post.id}')" id="like-${post.id}">
-            ❤️ ${post.likes || 0}
+            ❤️ 
           </button>
 
           <button onclick="toggleComments('${post.id}')">

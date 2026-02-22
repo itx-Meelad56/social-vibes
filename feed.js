@@ -245,7 +245,6 @@ window.toggleComments = function (postId) {
 window.likePost = async function (postId) {
     window.likePost = async function (postId) {
 
-        // Check if already liked
         const { data: existingLike } = await supabase
             .from("likes")
             .select("*")
@@ -254,20 +253,17 @@ window.likePost = async function (postId) {
             .single();
 
         if (existingLike) {
-            // Unlike
             await supabase
                 .from("likes")
                 .delete()
                 .eq("post_id", postId)
                 .eq("user_id", user.id);
         } else {
-            // Like
             await supabase
                 .from("likes")
                 .insert([{ post_id: postId, user_id: user.id }]);
         }
 
-        // Get updated like count
         const { count } = await supabase
             .from("likes")
             .select("*", { count: "exact", head: true })

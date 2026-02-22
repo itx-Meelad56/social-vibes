@@ -243,16 +243,36 @@ window.toggleComments = function (postId) {
 
 
 window.likePost = async function (postId) {
-    const likeBtn = document.getElementById(`like-${postId}`);
-    let currentLikes =
-        parseInt(likeBtn.innerText.replace("❤️ ", "")) || 0;
+    window.likePost = async function (postId) {
 
-    let newLikes = currentLikes + 1;
+        // Check if already liked
+        const { data: existingLike } = await supabase
+            .from("likes")
+            .select("*")
+            .eq("post_id", postId)
+            .eq("user_id", user.id)
+            .single();
 
-    likeBtn.innerText = `❤️ ${newLikes}`;
+        if (existingLike) {
+            // Unlike
+            await supabase
+                .from("likes")
+                .delete()
+                .eq("post_id", postId)
+                .eq("user_id", user.id);
+        } else {
+            // Like
+            await supabase
+                .from("likes")
+                .insert([{ post_id: postId, user_id: user.id }]);
+        }
 
-    await supabase
-        .from("posts")
-        .update({ likes: newLikes })
-        .eq("id", postId);
+        // Get updated like count
+        const { count } = await supabase
+            .from("likes")
+            .select("*", { count: "exact", head: true })
+            .eq("post_id", postId);
+
+        document.getElementById(`like-${postId}`).innerText = `❤️ ${count}`;
+    };
 };
